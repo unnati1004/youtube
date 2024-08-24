@@ -16,6 +16,7 @@ export const SideBar = () => {
         {arr1.map((data, i) => (
           data === "Home" ? (
             <li key={i}>
+              {/* {data} */}
               <Link to="/">{data}</Link>
             </li>
           ) : (
