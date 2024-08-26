@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { closeMenu } from "../utils/appSlice";
 import { useParams, useSearchParams } from "react-router-dom";
+import CommentContainer from "./CommentContainer";
 
 export const WatchPage = () => {
   const [searchParams] = useSearchParams();
@@ -23,6 +24,7 @@ export const WatchPage = () => {
         referrerpolicy="strict-origin-when-cross-origin"
         allowFullscreen
       ></iframe>
+      <CommentContainer/>
     </div>
   );
 };
