@@ -6,6 +6,7 @@ import Body from './Component/Body';
 import Head from './Component/Head';
 import {MainContainer} from './Component/MainContainer';
 import {WatchPage} from './Component/WatchPage';
+import { Demo } from './Component/Demo';
 
 const appRouter = createBrowserRouter([
   {
@@ -14,8 +15,13 @@ const appRouter = createBrowserRouter([
     children: [
       { path: "/", element: <MainContainer /> },
       { path: "watch", element: <WatchPage/> },
+      {
+        path:"/demo",
+        element:<Demo/>
+      }
     ],
   },
+ 
 ]);
 
 function App() {
