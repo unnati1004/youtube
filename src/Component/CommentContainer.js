@@ -1,5 +1,4 @@
 import React from "react";
-import Comment from "./Comment";
 import { CommentList } from "./CommentList";
 
 const CommentContainer = () => {
@@ -78,7 +77,7 @@ const CommentContainer = () => {
     },
   ];
   return (
-    <div className="m-5 p-2">
+    <div className="relative top-[48rem] m-5 p-2">
       <h1 className="text-2xl">Comments:</h1>
       <CommentList data={commentData} />
     </div>

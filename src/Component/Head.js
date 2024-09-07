@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
 import { Youtube_search_api } from "../utils/constants";
 import { cacheResults } from "../utils/searchSlice";
+import { Link } from "react-router-dom";
 
 const Head = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -54,7 +55,7 @@ const Head = () => {
   };
 
   return (
-    <div className="grid grid-flow-col p-5 m-2 shadow-lg">
+    <div className=" grid grid-flow-col p-5 shadow-lg fixed top-0 left-0 right-0 bg-white z-50 w-full">
       <div className="flex col-span-1">
         <img
           onClick={() => toggleMenuHandler()}
@@ -97,11 +98,13 @@ const Head = () => {
         )}
       </div>
       <div className="col-span-1">
+        <a href="/login">
         <img
           className="h-8"
           alt="user"
           src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png"
-        />
+          />
+          </a>
       </div>
     </div>
   );
