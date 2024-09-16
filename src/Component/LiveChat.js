@@ -13,7 +13,6 @@ export const LiveChat = () => {
 
   useEffect(() => {
     const i = setInterval(() => {
-      //  console.log("Api pollling");
       //API Polling
       dispatch(
         addMessage({
@@ -33,6 +32,7 @@ export const LiveChat = () => {
        {livemessage.map((data) => {     
          return (
            <ChatMessage
+           key={data.name}
            name={data.name}
            message={data.message}
            />
