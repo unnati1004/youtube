@@ -1,5 +1,3 @@
-import React from 'react';
-
 // VideoCard Component
 export const VideoCard = ({ info, hideDetails = false }) => {
   const { snippet, statistics } = info;
