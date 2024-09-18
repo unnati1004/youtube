@@ -9,7 +9,6 @@ export const LiveChat = () => {
   const [inputlivemessage,setInputlivemessage] = useState("")
   const dispatch = useDispatch();
   const livemessage = useSelector((store) => store.chat.messages);
-  // console.log("ChatMessage", livemessage);
 
   useEffect(() => {
     const i = setInterval(() => {
