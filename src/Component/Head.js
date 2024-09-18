@@ -12,19 +12,10 @@ const Head = () => {
 
   const searchCache = useSelector((store) => store.search);
   const dispatch = useDispatch();
-
-  /**
-   *  searchCache = {
-   *     "iphone": ["iphone 11", "iphone 14"]
-   *  }
-   *  searchQuery = iphone
-   */
-
+  
   useEffect(() => {
     const timer = setTimeout(() => {
-      // console.log(searchCache[searchQuery]);
       if (searchCache[searchQuery]) {
-        
         setSuggestions(searchCache[searchQuery]);
       } else {
         getSearchSugsestions();
@@ -39,9 +30,7 @@ const Head = () => {
   const getSearchSugsestions = async () => {
     const data = await fetch(Youtube_search_api + searchQuery);
     const json = await data.json();
-    // console.log(json[1]);
     setSuggestions(json[1]);
-
     // update cache
     dispatch(
       cacheResults({
