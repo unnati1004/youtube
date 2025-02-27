@@ -17,8 +17,8 @@ const VideoContainer = () => {
   }, []);
 
   return (
-    <div className="absolute top-[8rem] left-[14rem] flex flex-wrap justify-start items-start p-4 max-w-[90%]">
-     { videos[0]&&<AdVideoCard info={videos[0]}/>}
+    <div className="absolute top-[8rem] left-[14rem] grid grid-cols-[repeat(auto-fit,minmax(300px,auto))] gap-4 p-4 max-w-[90%]">
+     { videos[0]&&<AdVideoCard info={videos[0]}/>} 
       {videos.map((video) => (
         <Link to={"/watch?v=" + video.id}>
           <VideoCard key={video.id} info={video} />
