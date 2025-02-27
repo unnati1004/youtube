@@ -32,9 +32,7 @@ const ButtonList = () => {
   };
 
   return (
-    <div className="w-[88.5%] flex items-center fixed top-[5.2rem] left-[220px] right-0 bg-white z-10 p-2"
-    // style={{  Width: "50%" }}
-    >
+    <div className="w-[88.5%] flex items-center fixed top-[5.2rem] left-[220px] right-0 bg-white z-10 p-2">
       {/* Button to scroll left */}
       <button
         onClick={() => scroll("left")}

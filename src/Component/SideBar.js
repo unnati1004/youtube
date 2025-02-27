@@ -1,4 +1,3 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';
@@ -59,9 +58,6 @@ export const SideBar = () => {
     { text: "Watch Later", icon: WatchLaterOutlinedIcon, to: "/Movie" },
     { text: "Liked Videos", icon: ThumbUpOutlinedIcon },
   ];
-
-  // const subscriptionsMenu = ["Music", "Sport", "Gaming", "Movies"];
-  // const watchLaterMenu = ["Music", "Sport", "Gaming", "Movies"];
 
   return (
     <div className="p-5 w-[14rem] h-full fixed top-[5.3rem] left-30 right-30 bg-white z-50 p-2">

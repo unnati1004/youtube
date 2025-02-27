@@ -20,8 +20,6 @@ export const Demo2 = () => {
           className='bg-green-200 px-2 m-2'
             onClick={()=>{
                x=x+1;
-               console.log(x);
-               
             }}
           >
                Increase x
@@ -33,8 +31,6 @@ export const Demo2 = () => {
           className='bg-green-200 px-2 m-2'
             onClick={()=>{
                setValue(value+1)
-               // console.log(x);
-               
             }}
           >
                Increase y
@@ -46,9 +42,6 @@ export const Demo2 = () => {
           className='bg-green-200 px-2 m-2'
             onClick={()=>{
                ref.current = ref.current + 1
-               // setValue(value+1)
-               // console.log(x);
-               
             }}
           >
                Increase Ref

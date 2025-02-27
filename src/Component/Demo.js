@@ -8,8 +8,6 @@ export const Demo = () => {
   // heavy operation
   const prime = useMemo(() => findNthPrime(text), [text]);
 
-  console.log("Rendering ...");
-
   return (
     <div
       className={

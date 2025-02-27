@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { closeMenu } from "../utils/appSlice";
 import { useParams, useSearchParams } from "react-router-dom";
@@ -14,7 +14,7 @@ import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlin
 export const WatchPage = () => {
   const [searchParams] = useSearchParams();
   const [videoData, setVideoData] = useState([]);
-  // console.log(searchParams.get("v"))
+
   let key = searchParams.get("v");
   const dispatch = useDispatch();
   const functionMenu = [
@@ -28,11 +28,9 @@ export const WatchPage = () => {
       `${Youtube_video_details}${key}&key=${Google_Api_key}`
     );
     const json = await data.json();
-    console.log(json.items[0]);
     setVideoData(json.items[0]);
   };
   const { snippet } = videoData;
-  // console.log("videoData",videoData);
 
   useEffect(() => {
     getVideos();
